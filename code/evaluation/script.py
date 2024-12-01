@@ -41,7 +41,7 @@ def randomness (resp:str, M:int) -> float:
 
 if __name__ == "__main__":
     print("# UNIFORMITY #")
-    with open('code/puf_evaluation/uniformity.txt', 'r') as f:
+    with open('uniformity.txt', 'r') as f:
         for _ in range(100):
             f.readline()    # CHALLENGE LIST
         RESP = f.readline().split(' ')[2]
@@ -49,14 +49,14 @@ if __name__ == "__main__":
     print(U)
 
     print("\n# STABILITY #")
-    with open('code/puf_evaluation/stability.txt', 'r') as f:
+    with open('stability.txt', 'r') as f:
         f.readline()    # CHALLENGE
         RESP = f.readline().split(' ')[2]
     S = stability(RESP, len(RESP))
     print(S)
 
     print("\n# RANDOMNESS #")
-    with open('code/puf_evaluation/randomness.txt', 'r') as f:
+    with open('randomness.txt', 'r') as f:
         f.readline() # CHALLENGE LIST
         RESP = f.readline().split(' ')[2]
     R = randomness(RESP, len(RESP))
